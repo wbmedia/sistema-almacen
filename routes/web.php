@@ -13,10 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Base Routes
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login')->with(['title' => 'Login Session', 'active' => 'login']);
 });
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', ['uses' => 'Auth\LoginController@logout', 'as' => 'auth.logout']);
+Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function() {
+    Route::get('/', ['as' => 'admin.index', function () {
+        return view('admin.index')
+            ->with(['title' => 'Panel de Administración', 'active' => 'home']);
+    }]);
+});

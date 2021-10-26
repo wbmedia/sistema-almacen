@@ -4,15 +4,12 @@
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Reset Password') }}</div>
-
+            <div class="card card-alternative">
                 <div class="card-body">
+                    <div>{{ __('Reset Password') }}</div>
                     <form method="POST" action="{{ route('password.update') }}">
                         @csrf
-
                         <input type="hidden" name="token" value="{{ $token }}">
-
                         <div class="form-group row">
                             <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
 

@@ -9,6 +9,7 @@ class Location extends Model
     protected $table = "locations";
 
     protected $fillable = ['description'];
+    protected $guarded = [];
 
     public function actives()
     {

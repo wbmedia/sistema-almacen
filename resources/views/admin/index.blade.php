@@ -67,6 +67,37 @@
                 </div>
             </div>
         </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <div class="card card-alternative">
+                        <div class="card-body text-center">
+                            <a class="btn-link-alternative-black" href="{{ route('actives.index') }}">
+                            <img width="200" src="{{ asset('images/icons/icons8-product-box.svg') }}" alt="salidas">
+                            <h3 class="card-title-alternate">Activos</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <div class="card card-alternative">
+                        <div class="card-body text-center">
+                            <img width="200" src="{{ asset('images/icons/icons8-list.svg') }}" alt="salidas">
+                            <h3 class="card-title-alternate">Logs</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-12 mb-2">
+                    <div class="card card-alternative">
+                        <div class="card-body text-center">
+                            <a class="btn-link-alternative-black" href="{{ route('locations.index') }}">
+                            <img width="200" src="{{ asset('images/icons/icons8-place-marker.svg') }}" alt="salidas">
+                            <h3 class="card-title-alternate">Tracking</h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
     </div>
 
 @endsection
